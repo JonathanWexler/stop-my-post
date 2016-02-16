@@ -14,14 +14,14 @@ end
 
 def facebook
   puts @graph = Koala::Facebook::API.new(ENV['FACEBOOK_GRAPH_KEY'])
-  puts "GRAPH 1"
-  puts profile = @graph.get_object("me")
-  puts "GRAPH 2"
+  # puts "GRAPH 1"
+  # puts profile = @graph.get_object("me")
+  # puts "GRAPH 2"
 
-  puts  friends = @graph.get_connections("me", "friends")
+  puts  friends = @graph.get_connections("me", "feed")
   puts "GRAPH 3"
 
-  puts @graph.put_connections("me", "feed", message: "I am writing on my wall!")
+  # puts @graph.inspect
 
     # # Three-part queries are easy too!
     # @graph.get_connections("me", "mutualfriends/#{friend_id}")
